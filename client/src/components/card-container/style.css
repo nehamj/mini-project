@@ -1,0 +1,32 @@
+.card-container{
+    margin:3vw 7vw;
+    position:relative;
+	display:grid;
+	grid-template-columns: auto auto auto ;
+	grid-gap: 5vw;
+	z-index: 2;
+}
+
+.loadMore {
+    width: 200px;
+    font-size: 25px;
+    color: #fff;
+	display: block;
+	cursor: pointer;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color:  rgb(39, 38, 38);
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.5s;
+  }
+  .loadMore:hover {
+    transform: scale(1);
+    transition: box-shadow 5px 20px 30px rgba(0,0,0,0.2);
+    color:  rgb(39, 38, 38);
+    background-color: #fff;
+    border: 1px solid  rgb(39, 38, 38);
+    text-decoration: none;
+  }

@@ -1,0 +1,20 @@
+.image-container{
+    height:70vh;
+    width: 100%;
+  background-image: url("../images/coffee_foam_beverage_cup_saucer_creative_continents_84944_3840x2160.jpeg");
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.head{
+  font-size: 4em;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-weight: 500;
+  position:absolute;
+  bottom:10%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  z-index: 2s;
+}
