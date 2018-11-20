@@ -4,6 +4,8 @@ import Navbar from './components/navbar'
 import Footer from './components/footer'
 import HomePage from './pages/homepage'
 import './App.css'
+import Content from './pages/contentpage';
+import SignLogin from './pages/sign-login';
 
 
 export default class App extends Component {
@@ -12,7 +14,11 @@ export default class App extends Component {
       <div className="pageContainer">
           <Navbar />
           <div className="content">
-            <HomePage />
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/signup-login" component={SignLogin} />
+            <Route path='/:restuarent' component={Content} />
+          </Switch>
           </div>
           <Footer />
 

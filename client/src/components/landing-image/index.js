@@ -7,7 +7,7 @@ export default class Landingimage extends Component {
     render(){
         return(
             <div className="image-container">
-                <div className="head">Hatching your ideas: How to build your company</div>
+                <div className="head">Beyond the Plate</div>
             </div>
         );
     }
