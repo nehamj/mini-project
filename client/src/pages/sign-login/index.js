@@ -11,7 +11,7 @@ export default class SignLogin extends Component{
     
     render(){
         return(
-            <div className="content-container">
+            <div className="sign-container">
             <div className="login-wrap">
 	            <div className="login-html">
 		            <input id="tab-1" type="radio" name="tab" className="sign-in" checked /><label for="tab-1" className="tab" style={{ cursor:'pointer'}}>Sign In</label>

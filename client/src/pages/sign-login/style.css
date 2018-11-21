@@ -1,10 +1,10 @@
-.content-container{
+.sign-container{
     position:absolute;
     min-height: 70vh;
     height: auto;
     width:100%;
-    margin:0;
-	background:#c8c8c8;
+	margin:0;
+	background-image: url('../../components/images/hand-drawn-vector-seamless-fast-food-pattern-sketch-doodle-elements-can-be-used-wallpaper-website-background-wrapping-79399747.jpeg');
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
 .login-wrap{

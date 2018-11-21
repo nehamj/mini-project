@@ -58,7 +58,6 @@ export default class CardContainer  extends Component{
                         </div>)
                         :""
                     }
-                    <Route path='/:restuarent' component={Content}/>
                 </div>
         )
     }

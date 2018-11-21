@@ -1,0 +1,49 @@
+.info-container{
+    min-height:60vh; 
+    width:100%;
+    box-shadow :5px 20px 30px rgba(8, 8, 8, 0.2);
+    display: grid;
+    padding:5vh;
+    margin-left:12vw;
+    margin-top:12vh;
+    grid-template-columns: auto auto; 
+    font-size:18px;
+}
+
+.label{
+    color:rgb(231, 90, 34);
+}
+
+.detail{
+    color:white;
+}
+.image{
+    background-color: aqua;
+    height: 27vw;
+    width:25vw;
+   
+}
+
+.image img{
+    position:relative;
+    height: 100%;
+    width:100%;
+}
+
+.info{
+    
+    min-height: 10vh;
+    width:35vw;
+    padding:20px;
+}
+
+.star{
+    font-size: 1.25em;
+}
+   i{
+    height: 100%;
+    width:auto;
+    text-shadow: 0px 0px 3px #000;
+    color: rgba(243, 210, 22, 0.945);
+   
+}

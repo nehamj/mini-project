@@ -7,7 +7,9 @@ export default class Navbar extends Component {
     render(){
         return(
             <div className="nav-container">
-               <div className="left"></div>
+               <div className="left">
+                <Link to={"/"}><img alt="logo" src={require('../images/cloche-icon-white.png')}/></Link>
+               </div>
                <div className="right">
                <Link to={"/signup-login"}style={{ textDecoration: 'none' ,color:'white'}}>Signup / Login</Link>
                </div>

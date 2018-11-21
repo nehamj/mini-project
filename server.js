@@ -19,11 +19,9 @@ con.connect(function(err) {
 });
 
 
-/*app.get('/api/' ,(req,res)=> {
-
-
+app.get('/api/' ,(req,res)=> {
 
     res.json();
-});*/
+});
 
 app.listen(port, ()=> console.log('Server started on port ${port}'));

@@ -1,8 +1,8 @@
 .image-container{
-    height:70vh;
+    height:65vh;
     width: 100%;
-  background-image: url("../images/coffee_foam_beverage_cup_saucer_creative_continents_84944_3840x2160.jpeg");
-  background-size: 100% 100%;
+  background-image: url("../images/pexels-photo-370984.jpeg");
+  background-size: cover auto;
   position: relative;
 }
 
