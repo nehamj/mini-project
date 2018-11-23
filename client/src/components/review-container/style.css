@@ -1,0 +1,16 @@
+.review-container{
+    min-height:40vh; 
+    height: auto;
+    width:70%;
+    box-shadow :5px 20px 30px rgba(15, 5, 5, 0.2);
+    padding:5vh;
+    margin-left:13vw;
+    margin-top:12vh;
+    margin-bottom: 12vh; 
+    background-color: ghostwhite;
+    font-size:18px;
+}
+
+.heading{
+    text-align: left;
+}

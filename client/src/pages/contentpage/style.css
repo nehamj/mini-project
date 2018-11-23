@@ -1,5 +1,6 @@
 .content-container{
     position:absolute;
     min-height: 100vh;
-    width:70vw;
+    width:100%;
+    background-image: url('../../components/images/hand-drawn-vector-seamless-fast-food-pattern-sketch-doodle-elements-can-be-used-wallpaper-website-background-wrapping-79399747.jpeg');
 }

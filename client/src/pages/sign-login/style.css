@@ -14,7 +14,7 @@
 	position:relative;
 	box-shadow:0 12px 15px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
 	padding:90px 70px 50px 70px;
-	background:#737777f5;
+	background:ghostwhite;
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -47,7 +47,7 @@
 }
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
-	color:#fff;
+	color:rgb(0, 0, 0);
 	border-color:#0d0d0e;
 }
 .login-form{
@@ -62,8 +62,8 @@
 .login-form .group .label,
 .login-form .group .input,
 .login-form .group .button{
-	width:100%;
-	color:#fff;
+	width:90%;
+	color:rgb(180, 175, 175);
 	display:block;
 }
 .login-form .group .input,
@@ -71,14 +71,14 @@
 	border:none;
 	padding:15px 20px;
 	border-radius:25px;
-	background:rgba(255,255,255,.1);
+	background:rgba(56, 54, 54, 0.1);
 }
 .login-form .group input[data-type="password"]{
 	text-security:circle;
 	-webkit-text-security:circle;
 }
 .login-form .group .label{
-	color:rgb(248, 242, 242);
+	color:rgb(80, 63, 63);
 	font-size:12px;
 }
 .login-form .group .button{

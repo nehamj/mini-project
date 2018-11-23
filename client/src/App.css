@@ -8,5 +8,6 @@
 
 .content{
   min-height: 90vh;
+  height: auto;
   margin-top: 12vh;
 }

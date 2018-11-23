@@ -18,6 +18,7 @@ export default class SignLogin extends Component{
 		            <input id="tab-2" type="radio" name="tab" className="sign-up" /><label for="tab-2" className="tab" style={{ cursor:'pointer'}}>Sign Up</label>
 		        <div className="login-form">
 			<div className="sign-in-htm">
+			<br/>
 				<div className="group">
 					<label for="user" className="label">Username</label>
 					<input id="user" type="text" className="input" />
@@ -26,7 +27,7 @@ export default class SignLogin extends Component{
 					<label for="pass" className="label">Password</label>
 					<input id="pass" type="password" className="input" data-type="password" />
 				</div>
-				<div className="group">
+				<div className="group"><br />
 					<input type="submit" className="button" value="Sign In" />
 				</div>
 				<div className="hr"></div>

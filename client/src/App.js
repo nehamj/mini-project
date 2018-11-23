@@ -16,8 +16,8 @@ export default class App extends Component {
           <div className="content">
           <Switch>
             <Route path="/" exact component={HomePage} />
-            <Route path="/signup-login" component={SignLogin} />
-            <Route path='/:restuarent' component={Content} />
+            <Route path="/signup-login" exact component={SignLogin} />
+            <Route path='/:restuarent' exact component={Content} />
           </Switch>
           </div>
           <Footer />

@@ -1,12 +1,13 @@
 .info-container{
     min-height:60vh; 
-    width:100%;
-    box-shadow :5px 20px 30px rgba(8, 8, 8, 0.2);
+    width:70%;
+    box-shadow :5px 20px 30px rgba(15, 5, 5, 0.2);
     display: grid;
     padding:5vh;
-    margin-left:12vw;
+    margin-left:13vw;
     margin-top:12vh;
     grid-template-columns: auto auto; 
+    background-color: ghostwhite;
     font-size:18px;
 }
 
@@ -40,7 +41,7 @@
 .star{
     font-size: 1.25em;
 }
-   i{
+   .star i{
     height: 100%;
     width:auto;
     text-shadow: 0px 0px 3px #000;
