@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styles from './style.css';
 import CardInfo from '../../components/card-info';
 import ReviewContainer from '../../components/review-container';
-import Response from '../../components/response';
+
 
 
 export default class Content extends Component{
@@ -18,7 +18,6 @@ export default class Content extends Component{
             <div className="content-container">
                 <CardInfo restaurentName={this.props.match.params.restuarent} />
                 <ReviewContainer />
-                {/*<Response />*/}
             </div>
         );
     }

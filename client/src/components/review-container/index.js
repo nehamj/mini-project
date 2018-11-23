@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styles from './style.css';
 import ReviewCard from '../review-card';
+import Response from '../../components/response';
 
 
 export default class ReviewContainer extends Component{
@@ -46,6 +47,11 @@ export default class ReviewContainer extends Component{
                         </div>)
                         :""
                     }
+                    <br />
+                    <hr />
+                    <br />
+                    <h1 className="heading">Enter Your Opinion</h1>
+                    <Response />
             </div>
           
         )

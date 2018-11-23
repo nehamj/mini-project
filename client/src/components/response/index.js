@@ -5,13 +5,21 @@ export default class Response extends Component {
 
     render(){
         return(
-         
-        <form  className="form-container">
-        <input type="email" name="email" placeholder="Your email" />
-        <textarea name="message" placeholder="Your message"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      
+            <div className="response-container">
+            <form >
+              <label>Title</label>
+              <input type="text"  name="title" placeholder="Title" />
+          
+              <label>Rating</label>
+              <input type="text" name="rating" placeholder="Your rating" />
+              
+              <label>Your review</label>
+              <textarea  name="review" placeholder="Write something.." style={{height:"200px"}}></textarea>
+          
+           
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
       )
     }
 }
