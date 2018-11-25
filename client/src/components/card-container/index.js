@@ -10,25 +10,18 @@ export default class CardContainer  extends Component{
     constructor(props){
         super(props)
         this.state={  /* default database information*/
-            cardInfo:[{img:"http://placeimg.com/640/480/people",descp:"lalaland",name:"random",rating:"4"},
-            {img:"http://placeimg.com/640/480/people",descp:"heaven on earth",name:"ikka",rating:"3.5"},
-            {img:"http://placeimg.com/640/480/people",descp:"food pallete",name:"ma resturent",rating:"3"},
-            {img:"http://placeimg.com/640/480/people",descp:"foody",name:"lorem di",rating:"3.5"},
-            {img:"http://placeimg.com/640/480/people",descp:"autentic",name:"kitchen house",rating:"4.5"},
-            {img:"http://placeimg.com/640/480/people",descp:"lalaland",name:"random",rating:"1.5"},
-            {img:"http://placeimg.com/640/480/people",descp:"heaven on earth",name:"ikka",rating:"4.5"},
-            {img:"http://placeimg.com/640/480/people",descp:"food pallete",name:"ma resturent",rating:"4"},
-            {img:"http://placeimg.com/640/480/people",descp:"foody",name:"lorem di",rating:"3"},
-            {img:"http://placeimg.com/640/480/people",descp:"autentic",name:"kitchen house",rating:"2.3"},
-            {img:"http://placeimg.com/640/480/people",descp:"food pallete",name:"ma resturent",rating:"4.3"},
-            {img:"http://placeimg.com/640/480/people",descp:"foody",name:"lorem di",rating:"3.6"},
-            {img:"http://placeimg.com/640/480/people",descp:"autentic",name:"kitchen house",rating:"4.2"}
-        ],
-        card_len:6   /*no. of cards to display default */
+            cardInfo:[],
+            card_len:6   /*no. of cards to display default */
         }
 
         this.showMore=this.showMore.bind(this)
     }
+
+    componentDidMount(){
+        fetch('/api/Restaurent/landing')
+        .then(res => res.json())
+        .then(cardInfo => this.setState({cardInfo},() => console.log(cardInfo)));
+ }
 
     showMore(){        /*to display 6 more cards on click loadmore */
         var len 
@@ -44,7 +37,7 @@ export default class CardContainer  extends Component{
     render(){
         var grid = []
         for(var i=0 ; i<this.state.card_len ; i++){
-			var gridItem = <Link key={i} to={"/"+this.state.cardInfo[i].name}><Card details={this.state.cardInfo[i]} /></Link>
+			var gridItem = <Link key={i} to={"/"+this.state.cardInfo[i].Name}><Card details={this.state.cardInfo[i]} /></Link>
                grid.push(gridItem) 
         }  
         return( 
@@ -56,7 +49,7 @@ export default class CardContainer  extends Component{
                         (<div className="loadMore" onClick={this.showMore} >
                             Load More
                         </div>)
-                        :""
+                       :""
                     }
                 </div>
         )
