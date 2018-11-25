@@ -36,14 +36,16 @@ export default class CardContainer  extends Component{
 
     render(){
         var grid = []
-        for(var i=0 ; i<this.state.card_len ; i++){
-			var gridItem = <Link key={i} to={"/"+this.state.cardInfo[i].Name}><Card details={this.state.cardInfo[i]} /></Link>
+        for(var i in this.state.cardInfo){
+            if(i<this.state.card_len){
+			var gridItem = <Link key={i} to={"/"+this.state.cardInfo[i].RID}><Card details={this.state.cardInfo[i]} /></Link>
                grid.push(gridItem) 
+            }
         }  
         return( 
                 <div>
                     <div className="card-container">
-                        {grid}
+                    {grid}
                     </div>
                     { (this.state.card_len!=this.state.cardInfo.length)? /*to display button only when der is more item */
                         (<div className="loadMore" onClick={this.showMore} >

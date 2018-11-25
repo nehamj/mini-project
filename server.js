@@ -26,7 +26,19 @@ connection.connect(function(err) {
 });
 
 app.get('/api/Restaurent/landing/', function(req, res){
-        let sql = `SELECT Name,Image,Rating FROM Restaurent order by Rating desc`;
+        let sql = `SELECT RID,Name,Image,Rating FROM Restaurent order by Rating desc`;
+        connection.query(sql, (error, results, fields) => {
+          if (error) {
+            return console.error(error.message);
+          }
+          console.log(results);
+          res.json(results);
+        });
+        
+});
+
+app.get('/api/Restaurent/:restaurent/', function(req, res){
+        let sql = `SELECT * FROM Restaurent where RID = `+ req.params.restaurent;
         connection.query(sql, (error, results, fields) => {
           if (error) {
             return console.error(error.message);
