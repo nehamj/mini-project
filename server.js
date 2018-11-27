@@ -26,7 +26,7 @@ connection.connect(function(err) {
 });
 
 app.get('/api/Restaurent/landing/', function(req, res){
-        let sql = `SELECT RID,Name,Image,Rating FROM Restaurent order by Rating desc`;
+        let sql = `SELECT RID,Name,Image,Rating,Cuisines,District FROM Restaurent order by Rating desc`;
         connection.query(sql, (error, results, fields) => {
           if (error) {
             return console.error(error.message);
@@ -47,6 +47,47 @@ app.get('/api/Restaurent/:restaurent/', function(req, res){
           res.json(results);
         });
         
+});
+
+app.get('/api/Restaurent/review/:rid/', function(req, res){
+        console.log(req.params.rid);
+        let sql = `SELECT * FROM Review where RestID=`+req.params.rid;
+        connection.query(sql, (error, results, fields) => {
+          if (error) {
+            return console.error(error.message);
+          }
+          console.log(results);
+          res.json(results);
+        });
+        
+});
+
+app.post('/api/addreview',function(req,res){
+  let response= req.body;
+  console.log(response);
+    let sql =`INSERT INTO Review(RestID,UserID,Rating,Title,Review) VALUES (?,?,?,?,?)`;
+    let creds=[response.rid,response.name,response.rating,response.title,response.review];
+    connection.query(sql, creds, (error, results, fields) => {
+      if (error) {
+        return console.error(error.message);
+      }
+      console.log(results);
+      res.json(results);
+      });
+});
+
+app.post('/api/addrestaurant',function(req,res){
+  let response= req.body;
+  console.log(response);
+    let sql =`INSERT INTO Restaurent(Name,Location,District,Image,Cuisines,Pricefortwo,Timing,Rating,Totalreviews) VALUES (?,?,?,?,?,?,?,?,?)`;
+    let creds=[response.rname,response.location,response.district,response.image,response.cuisines,response.price_for_two,response.timing,response.rating,response.rating_no];
+    connection.query(sql, creds, (error, results, fields) => {
+      if (error) {
+        return console.error(error.message);
+      }
+      console.log(results);
+      res.json(results);
+      });
 });
 
 app.listen(port, ()=> console.log('Server started on port ${port}'));

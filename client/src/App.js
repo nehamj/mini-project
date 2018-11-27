@@ -6,6 +6,8 @@ import HomePage from './pages/homepage'
 import './App.css'
 import Content from './pages/contentpage';
 import SignLogin from './pages/sign-login';
+import AddRestuarent from './pages/add-rest';
+import Acknowledgment  from './pages/acknowlegement';
 
 
 export default class App extends Component {
@@ -17,6 +19,8 @@ export default class App extends Component {
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/signup-login" exact component={SignLogin} />
+            <Route path='/add-restaurant' exact component={AddRestuarent} />
+            <Route path='/acknowledgment ' exact component={Acknowledgment } />
             <Route path='/:restuarent' exact component={Content} />
           </Switch>
           </div>

@@ -1,6 +1,7 @@
 .search {
-    width: 100%;
-    position: relative
+    width: 45vw;
+    position: relative;
+    margin-left:20px;
   }
   
   .searchTerm {

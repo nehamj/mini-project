@@ -1,0 +1,19 @@
+.add-main-container{
+    min-height:40vh; 
+    height: auto;
+    width:70%;
+    box-shadow :5px 20px 30px rgba(15, 5, 5, 0.2);
+    padding:5vh;
+    margin-left:13vw;
+    margin-top:12vh;
+    margin-bottom: 12vh; 
+    background-color: ghostwhite;
+    font-size:18px;
+}
+.add-container {
+    border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        font-size: 22px;
+        font-weight: 200;
+    }

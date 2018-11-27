@@ -8,17 +8,19 @@ export default class ReviewContainer extends Component{
 
     constructor(){
         super()
-        this.state={info:[{title:"Look ma, a review title!",rating:"4.9",username:"John Green",content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam eveniet harum perferendis facere blanditiis molestias sit omnis, fugit, amet enim error eius aperiam dolorum autem nam voluptatibus velit. Inventore!"},
-        {title:"Look ma, a review title!",rating:"2.5",username:"John Green",content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam eveniet harum perferendis facere blanditiis molestias sit omnis, fugit, amet enim error eius aperiam dolorum autem nam voluptatibus velit. Inventore!"},
-        {title:"Look ma, a review title!",rating:"1.2",username:"John Green",content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam eveniet harum perferendis facere blanditiis molestias sit omnis, fugit, amet enim error eius aperiam dolorum autem nam voluptatibus velit. Inventore!"},
-        {title:"Look ma, a review title!",rating:"3.3",username:"John Green",content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam eveniet harum perferendis facere blanditiis molestias sit omnis, fugit, amet enim error eius aperiam dolorum autem nam voluptatibus velit. Inventore!"},
-        {title:"Look ma, a review title!",rating:"4.5",username:"John Green",content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam eveniet harum perferendis facere blanditiis molestias sit omnis, fugit, amet enim error eius aperiam dolorum autem nam voluptatibus velit. Inventore!"},
-        {title:"Look ma, a review title!",rating:"2.2",username:"John Green",content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam eveniet harum perferendis facere blanditiis molestias sit omnis, fugit, amet enim error eius aperiam dolorum autem nam voluptatibus velit. Inventore!"}],
-
-        card_len:2
+        this.state={info:[],
+                    card_len:2
     }
     this.showMore=this.showMore.bind(this)
     }
+
+
+    componentDidMount(){
+        fetch('/api/Restaurent/review/'+this.props.rid)
+        .then(res => res.json())
+        .then(info => this.setState({info},() => console.log(info)));
+    }
+
 
     showMore(){        /*to display 6 more cards on click loadmore */
         var len 
@@ -32,16 +34,19 @@ export default class ReviewContainer extends Component{
     }
 
     render(){
+        {console.log("in review"+this.props.rid);}
         var grid = []
-        for(var i=0 ; i<this.state.card_len ; i++){
-			var gridItem = <ReviewCard info={this.state.info[i]}/>
-               grid.push(gridItem) 
+        for(var i in this.state.info){
+            if(i<this.state.card_len){
+			    var gridItem = <ReviewCard info={this.state.info[i]}/>
+                grid.push(gridItem) 
+            }
         }  
         return(
             <div className="review-container">
                    <h1 className="heading">User Review</h1>
                    {grid}
-                   { (this.state.card_len!=this.state.info.length)? /*to display button only when der is more item */
+                   { (this.state.card_len<this.state.info.length) && this.state.info.length !== 0?  /*to display button only when der is more item */
                         (<div className="loadMore" onClick={this.showMore} >
                             Load More
                         </div>)
@@ -51,7 +56,7 @@ export default class ReviewContainer extends Component{
                     <hr />
                     <br />
                     <h1 className="heading">Enter Your Opinion</h1>
-                    <Response />
+                    <Response rid={this.props.rid} />
             </div>
           
         )

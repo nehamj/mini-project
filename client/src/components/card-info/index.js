@@ -19,7 +19,7 @@ export default class CardInfo extends Component {
                         <span className="label">CRUSINE: </span><span className="details">{this.props.details.Cuisines}</span>
                         <br /><br />
                         <span className="label">TIMING: </span><span className="details">{this.props.details.Timing}</span><br /><br />
-                        <span className="label">PRICE: </span><span className="details">{this.props.details.Pricefortwo}</span>  <br /><br />
+                        <span className="label">PRICE FOR TWO: </span><span className="details">{this.props.details.Pricefortwo}</span>  <br /><br />
 
 
                 </div>

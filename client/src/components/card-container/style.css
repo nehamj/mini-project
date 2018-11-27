@@ -30,3 +30,8 @@
     border: 1px solid  rgb(39, 38, 38);
     text-decoration: none;
   }
+
+  .filter-container{
+    height: 13vh;
+    background-color: #333;
+}

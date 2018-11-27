@@ -21,15 +21,22 @@ export default class Content extends Component{
     
     render(){
         var grid = []
+        var grid1 =[]
         for(var i in this.state.details){
 			var gridItem = <CardInfo details={this.state.details[i]} />
                grid.push(gridItem) 
         
         }  
+        for(var i in this.state.details){
+			var gridItem = <ReviewContainer rid={this.state.details[i].RID}/>
+               grid1.push(gridItem) 
+        
+        }  
+        
         return(
             <div className="content-container">
                 {grid}
-                <ReviewContainer />
+                {grid1}
             </div>
         );
     }
